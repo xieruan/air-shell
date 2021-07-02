@@ -115,14 +115,14 @@ install_XrayR() {
             exit 1
         fi
         echo -e "检测到 XrayR 最新版本：${last_version}，开始安装"
-        wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/XrayR-project/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip
+        wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://mirror.ghproxy.com/github.com/XrayR-project/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载 XrayR 失败，请确保你的服务器能够下载 Github 的文件${plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/XrayR-project/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip"
+        url="https://mirror.ghproxy.com/github.com/XrayR-project/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip"
         echo -e "开始安装 XrayR v$1"
         wget -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
@@ -136,7 +136,7 @@ install_XrayR() {
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://github.com/XrayR-project/XrayR-release/raw/master/XrayR.service"
+    file="https://mirror.ghproxy.com/raw.githubusercontent.com/XrayR-project/XrayR-release/master/XrayR.service"
     wget -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     #cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -166,7 +166,7 @@ install_XrayR() {
         cp dns.json /etc/XrayR/
     fi
     
-    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/XrayR.sh
+    curl -o /usr/bin/XrayR -Ls https://mirror.ghproxy.com/raw.githubusercontent.com/XrayR-project/XrayR-release/master/XrayR.sh
     chmod +x /usr/bin/XrayR
     ln -s /usr/bin/XrayR /usr/bin/xrayr # 小写兼容
     chmod +x /usr/bin/xrayr
