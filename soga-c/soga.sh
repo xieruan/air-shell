@@ -359,7 +359,6 @@ show_usage() {
     echo "soga install      - 安装 soga"
     echo "soga uninstall    - 卸载 soga"
     echo "soga version      - 查看 soga 版本"
-    echo "soga 配置文件修改地址 - /etc/soga/soga.conf"
     echo "------------------------------------------"
 }
 
