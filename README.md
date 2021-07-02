@@ -12,9 +12,12 @@ aie-universe
 bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/AirU.sh)
 ```
 
+soga-crack
+仅供测试，商业用途请购买授权
 
-
-
+```
+bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/soga-c/install.sh)
+```
 
 
 
