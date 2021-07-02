@@ -84,7 +84,7 @@ before_show_menu() {
 }
 
 install() {
-    bash -c "$(curl -L https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install.sh)" @ install
+    bash -c "$(curl -L https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install-release.sh)" @ install
     bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
@@ -95,7 +95,7 @@ install() {
     fi
 }
 update_xray(){
-  bash -c "$(curl -L https://github.com/crossfw/Xray-install/raw/main/install-release.sh)" @ install
+  bash -c "$(curl -L https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install-release.sh)" @ install
   return 0
 }
 update() {
