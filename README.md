@@ -13,7 +13,10 @@ bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xie
 ```
 
 soga-crack
+
 仅供测试，商业用途请购买授权
+
+配置文件位置在 /etc/soga/soga.conf
 
 ```
 bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/soga-c/install.sh)
