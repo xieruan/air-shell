@@ -69,8 +69,8 @@ Installation_dependency() {
 }
 download() {
   mkdir /usr/local/etc/au/
-  airuniverse_url="https://mirror.ghproxy.com/https://github.com/crossfw/Air-Universe/releases/download/${VERSION}/Air-Universe-linux-${MACHINE}.zip"
-  xray_json_url="https://mirror.ghproxy.com/https://raw.githubusercontent.com/crossfw/Air-Universe-install/master/xray_config.json"
+  airuniverse_url="https://gh.xqw.workers.dev/https://github.com/crossfw/Air-Universe/releases/download/${VERSION}/Air-Universe-linux-${MACHINE}.zip"
+  xray_json_url="https://gh.xqw.workers.dev/https://raw.githubusercontent.com/crossfw/Air-Universe-install/master/xray_config.json"
 
   mv /usr/local/etc/xray/config.json /usr/local/etc/xray/config.json.bak
   wget -N  ${xray_json_url} -O /usr/local/etc/xray/config.json
@@ -222,7 +222,7 @@ chmod 644 /usr/local/etc/au/au.json
 }
 
 createService() {
-  service_file="https://mirror.ghproxy.com/https://raw.githubusercontent.com/crossfw/Air-Universe-install/master/au.service"
+  service_file="https://gh.xqw.workers.dev/https://raw.githubusercontent.com/crossfw/Air-Universe-install/master/au.service"
   wget -N  -O /etc/systemd/system/au.service ${service_file}
   chmod 644 /etc/systemd/system/au.service
   systemctl daemon-reload
