@@ -84,8 +84,8 @@ before_show_menu() {
 }
 
 install() {
-    bash -c "$(curl -L https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install-release.sh)" @ install
-    bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install.sh)
+    bash -c "$(curl -L https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install-release.sh)" @ install
+    bash <(curl -Ls https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -95,7 +95,7 @@ install() {
     fi
 }
 update_xray(){
-  bash -c "$(curl -L https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install-release.sh)" @ install
+  bash -c "$(curl -L https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install-release.sh)" @ install
   return 0
 }
 update() {
@@ -112,7 +112,7 @@ update() {
 #        fi
 #        return 0
 #    fi
-    bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install.sh) $version
+    bash <(curl -Ls https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/au/install.sh) $version
     if [[ $? == 0 ]]; then
         echo -e "${green}更新完成，已自动重启 Air-Universe，请使用菜单页内的查看日志查看运行日志${plain}"
         exit
@@ -141,7 +141,7 @@ uninstall() {
     systemctl daemon-reload
     systemctl reset-failed
     rm /usr/local/etc/au/ -rf
-    bash -c "$(curl -L https://mirror.ghproxy.com/https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ remove
+    bash -c "$(curl -L https://gh.xqw.workers.dev/https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ remove
     echo ""
     echo -e "卸载成功，如果你想删除此脚本，则退出脚本后运行 ${green}rm /usr/bin/airu -f${plain} 进行删除"
     echo ""
