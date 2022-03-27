@@ -4,12 +4,12 @@
 
 xrayr
 ```
-bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/xrayr/install.sh)
+bash <(curl -Ls https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/xrayr/install.sh)
 ```
-aie-universe
+air-universe
 
 ```
-bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/au/AirU.sh)
+bash <(curl -Ls https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/au/AirU.sh)
 ```
 
 soga-crack
@@ -19,7 +19,7 @@ soga-crack
 配置文件位置在 /etc/soga/soga.conf
 
 ```
-bash <(curl -Ls https://mirror.ghproxy.com/https://raw.githubusercontent.com/xieruan/air-shell/main/soga-c/install.sh)
+bash <(curl -Ls https://gh.xqw.workers.dev/https://raw.githubusercontent.com/xieruan/air-shell/main/soga-c/install.sh)
 ```
 
 
